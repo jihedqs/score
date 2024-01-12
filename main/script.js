@@ -58,13 +58,13 @@ function update(x) {
 
   sub.score.controle = controleDvr;
   sub.score.oral = oralDvr;
-  sub.score.synthese = syn * 2;
+  sub.score.synthese = syn;
 
   syntheseInput.value = oralInput.value = controleInput.value = "";
 }
 
 function moy(oral, cont, syne, quo) {
-  return ((oral + cont + syne) / quo).toFixed(2);
+  return ((oral + cont + syne * 2) / quo).toFixed(2);
 }
 
 function realTime(x) {
@@ -75,7 +75,7 @@ function realTime(x) {
 
   sub.score.controle = controleDvr;
   sub.score.oral = oralDvr;
-  sub.score.synthese = syn * 2;
+  sub.score.synthese = syn;
 
   sub.average = moy(
     sub.score.oral,
